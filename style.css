@@ -42,6 +42,7 @@
   letter-spacing: -1px;
   text-transform: uppercase;
   color: var(--color-blue-200);
+  text-decoration: none;
 }
 
 .header {
