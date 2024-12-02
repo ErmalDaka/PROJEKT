@@ -48,18 +48,3 @@ $('.slider__next, .go-to-next').on('click', function(){
   goToSlide(currentSlide);
 })
 
-/**
-* Get ref to loading screen
-*/
-var loadingScreen = document.querySelector('.loading-screen');
-
-window.onload = function() {
-  setTimeout(renderPage(), 2000);
-}
-
-/**
-* Remove Loading Screen
-*/
-function renderPage() {
-  loadingScreen.classList.add('loaded');
-}

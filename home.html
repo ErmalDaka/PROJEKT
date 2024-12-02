@@ -1,5 +1,6 @@
 <html>
     <head>
+     
       <meta name="HandheldFriendly" content="true">
       <meta name="MobileOptimized" content="320">
       <meta name="viewport" content="width = device-width, initial-scale = 1.0, minimum-scale = 1.0, maximum-scale = 1.0, user-scalable = no">
@@ -95,7 +96,23 @@
 
 
             <script src="jquery.js"></script>
-             <script src="index.js"></script>
+             <script src="index.js">
+              /**
+* Get ref to loading screen
+*/
+var loadingScreen = document.querySelector('.loading-screen');
+
+window.onload = function() {
+  setTimeout(renderPage(), 2000);
+}
+
+/**
+* Remove Loading Screen
+*/
+function renderPage() {
+  loadingScreen.classList.add('loaded');
+}
+             </script>
             </body>
 
 </html>
