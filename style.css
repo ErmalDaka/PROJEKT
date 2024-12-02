@@ -412,3 +412,63 @@
   display: block;
   float: left;
 }
+
+
+.loading-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1e1e24;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  color: #fff;
+  flex-direction: column;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.banner {
+  display: block;
+}
+
+.banner .loading-text {
+  text-transform: uppercase;
+  font-size: 27px;
+}
+
+.loader {
+  .dot {
+    height: 10px;
+    width: 10px;
+    background: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    animation-name: loading;
+	  animation-duration: 3s;
+    animation-iteration-count:infinite;  
+  }
+  .dot:nth-last-child(1) {
+    -webkit-animation-delay: 2.25s; /* Safari 4.0 - 8.0 */
+    animation-delay: 2.25s;
+  }
+  .dot:nth-last-child(2) {
+    -webkit-animation-delay: 1.5s; /* Safari 4.0 - 8.0 */
+    animation-delay: 1.5s;
+  }
+  .dot:nth-last-child(3) {
+    -webkit-animation-delay: .75s; /* Safari 4.0 - 8.0 */
+    animation-delay: .75s;
+  }
+ 
+}
+
+.loaded {
+  opacity: 0;
+}
+
+@-webkit-keyframes loading { 
+	25% { opacity: 1;}
+  50% { opacity: 0;}
+  100% { opacity:1; }
+ }
