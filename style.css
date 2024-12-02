@@ -91,6 +91,9 @@
   flex-direction: column;
   row-gap: 1.25rem;
   margin: 1.25rem;
+  list-style: none;
+  font-family: 'Manrope';
+  font-weight: 500;
 }
 .menu-link {
   font-family: inherit;
@@ -100,6 +103,8 @@
   text-transform: uppercase;
   color: var(--color-black);
   transition: all 0.3s ease;
+  text-decoration: none;
+  list-style: none;
 }
 .menu-link:hover {
   color: var(--color-blue-200);
