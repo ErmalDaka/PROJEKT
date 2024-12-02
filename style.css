@@ -97,7 +97,7 @@
 }
 .menu-link {
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 4vw;
   font-weight: 500;
   line-height: 1.5;
   text-transform: uppercase;
@@ -132,6 +132,7 @@
   .menu-link {
     text-transform: capitalize;
     text-decoration: none;
+    font-size: 24px;
   }
   .menu-block {
     margin-left: 2rem;
