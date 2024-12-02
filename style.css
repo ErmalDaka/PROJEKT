@@ -415,68 +415,31 @@
   float: left;
 }
 
+.loading-gif {
+  max-width: 500px;
+}
 
-.loading-screen {
+.pre-loader {
+  position: fixed;
+  z-index: 100; /** make sure this is the highest value compared to all other divs **/
+  top: 0;
+  left: 0;
+  background: #191f26;
   display: flex;
-  align-items: center;
   justify-content: center;
-  background: #1e1e24;
+  align-items: center;
   height: 100%;
   width: 100%;
-  position: absolute;
-  color: #fff;
-  flex-direction: column;
-  opacity: 1;
-  transition: opacity 1s;
 }
 
-.banner {
-  display: block;
+.pre-loader.hidden {
+  animation: fadeOut 2s; /** change to 1s */
+  animation-fill-mode: forwards;
 }
 
-.banner .loading-text {
-  text-transform: uppercase;
-  font-size: 27px;
-}
-
-.loader .dot {
-  height: 10px;
-  width: 10px;
-  background: #fff;
-  border-radius: 50%;
-  display: inline-block;
-  animation-name: loading;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-}
-.loader .dot:nth-last-child(1) {
-  -webkit-animation-delay: 2.25s;
-  /* Safari 4.0 - 8.0 */
-  animation-delay: 2.25s;
-}
-.loader .dot:nth-last-child(2) {
-  -webkit-animation-delay: 1.5s;
-  /* Safari 4.0 - 8.0 */
-  animation-delay: 1.5s;
-}
-.loader .dot:nth-last-child(3) {
-  -webkit-animation-delay: 0.75s;
-  /* Safari 4.0 - 8.0 */
-  animation-delay: 0.75s;
-}
-
-.loaded {
-  opacity: 0;
-}
-
-@-webkit-keyframes loading {
-  25% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
+@keyframes fadeOut {
   100% {
-    opacity: 1;
+      opacity: 0;
+      visibility: hidden;
   }
 }
