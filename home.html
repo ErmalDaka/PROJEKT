@@ -6,7 +6,7 @@
       <meta name="format-detection" content="telephone=no">
       <meta name="theme-color" content="#252D3D" />
 
-      <script src="swiper.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
@@ -63,6 +63,68 @@
                  
             </div>
              <script src="index.js"></script>
+             <script src="swiper.min.js">
+              var interleaveOffset = 0.5;
+
+var swiperOptions = {
+  loop: true,
+  speed: 300,
+  autoplay: {
+   delay: 10000,
+ },
+  grabCursor: true,
+  watchSlidesProgress: true,
+  mousewheelControl: true,
+  keyboardControl: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  },
+  on: {
+    progress: function() {
+      var swiper = this;
+      for (var i = 0; i < swiper.slides.length; i++) {
+        var slideProgress = swiper.slides[i].progress;
+        var innerOffset = swiper.width * interleaveOffset;
+        var innerTranslate = slideProgress * innerOffset;
+        swiper.slides[i].querySelector(".slide-inner").style.transform =
+          "translate3d(" + innerTranslate + "px, 0, 0)";
+      }      
+    },
+    touchStart: function() {
+      var swiper = this;
+      for (var i = 0; i < swiper.slides.length; i++) {
+        swiper.slides[i].style.transition = "";
+      }
+    },
+    setTransition: function(speed) {
+      var swiper = this;
+      for (var i = 0; i < swiper.slides.length; i++) {
+        swiper.slides[i].style.transition = speed + "ms";
+        swiper.slides[i].querySelector(".slide-inner").style.transition =
+          speed + "ms";
+      }
+    }
+  }
+};
+
+var swiper = new Swiper(".swiper-container", swiperOptions);
+
+// document.querySelector('[data-toggle]').addEventListener('click', function(){
+//   if (swiper.realIndex == 0) {
+//     swiper.slideTo(swiper.slides.length - 1);
+//   } else {
+//     swiper.slideTo(0);
+//   }
+// });
+
+// function logIndex () {
+//   requestAnimationFrame(logIndex);
+//   console.log(swiper.realIndex);
+// }
+// logIndex();
+
+</script>
            
             </body>
 
