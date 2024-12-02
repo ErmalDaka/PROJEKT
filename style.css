@@ -30,7 +30,7 @@
 
 
 .container {
-  max-width: 1200px;
+  max-width: calc(100vw - 80px);
   height: auto;
   margin: 0 auto;
   padding: 0.;
