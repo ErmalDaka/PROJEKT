@@ -55,7 +55,7 @@
   height: auto;
   z-index: 10;
   margin: 0 auto;
-  background-color: hsl(0deg 0% 100% / 5%);
+  background-color: hsl(0deg 0% 42.52% / 10%);
   box-shadow: var(--shadow-small);
 }
 
@@ -465,4 +465,34 @@
   font-weight: 800;
   color: var(--color-blue-200);
   text-transform: uppercase;
+}
+
+.section_two{
+  width: 100%;
+  float: left;
+  display: block;
+  height: 100vh;
+}
+.main_home{
+  width:100%;
+  float:left;
+  display: block;
+  position: relative;
+}
+.main_home video{
+  width: 100%;
+  height: auto;
+  float: left;
+  display: block;
+}
+
+.main_home::after{
+  position: absolute;
+  content:'';
+  width:100%;
+  height: 100%;
+  float: left;
+  display: block;
+  background-color: #000000;
+  opacity: 50%;
 }
