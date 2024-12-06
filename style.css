@@ -1,8 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Manrope:wght@200..800&display=swap');
-
-html {
-  scroll-behavior: smooth;
+body::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
 }
+
+body::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
+
 :root {
   --color-black: hsl(0, 0%, 10%);
   --color-darks: hsl(0, 0%, 25%);
@@ -209,7 +226,7 @@ html {
 .slider__wrap {
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
   transform: translateX(100vw);
   top: 0%;
   left: 0;
@@ -310,7 +327,7 @@ html {
   transform-origin: 100% 50%;
   opacity: 1;
   -webkit-animation: none;
-          animation: none;
+  animation: none;
 }
 .slider__back::before{
   position: absolute;
@@ -410,7 +427,7 @@ html {
 
 .section_one{
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   display: block;
   float: left;
 }
@@ -643,7 +660,7 @@ html {
   padding: 5px 10px;
   left: 0;
   right: 0;
-  bottom: 30px;
+  bottom: 5vh;
   margin: auto;
   transition: 0.4s;
 }
