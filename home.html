@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
         <body>
-      
+          <div id="butter">
           
             <header class="header" id="header">
                 <nav class="navbar container">
@@ -115,18 +115,35 @@
 
 
 
+                          <div class="footer">
+                            </div>
 
+                      
+                    </div>
+                    <div class='pre-loader'>
+                      <h1 class="preloader_h">Brand</h1>
+                   </div>
+            <script src="jquery.js"></script>
+             <script src="index.js"></script>
+             <script src="butter/butter.js">
 
-                        <div class='pre-loader'>
-                         <h1 class="preloader_h">Brand</h1>
-                      </div>
-            <script src="jquery.js">
-           
-
-            </script>
-             <script src="index.js">
+  
              </script>
-             
+             <script>
+              
+butter.init({
+  wrapperId: 'butter'
+});
+
+butter.init({
+  cancelOnTouch: true
+});
+butter.init({
+  wrapperDamper: 0.02
+});
+
+              </script>
+
             </body>
 
 </html>
