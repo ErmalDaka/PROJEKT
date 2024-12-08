@@ -74,24 +74,27 @@
                        </div>
        
                        <div class="right_contact">
-       
-                           <form>
-                               <div class="row">
-                                   <div class="left_contact">
-                                       <input type="text" class="form-control" placeholder="Name">
-                                   </div>
-                                   <div class="right_contact">
-                                       <input type="email" class="form-control" placeholder="Email">
-                                   </div>
-                                   <div class="subject_contact">
-                                       <input type="text" class="form-control1" placeholder="Subject">
-                                   </div>
+                        <form id="contactForm">
+                           <div class="row">
+                               <div class="left_contact">
+                                   <input type="text" class="form-control" id="name" placeholder="Name">
+                                   <div id="nameError" class="error"></div>
                                </div>
-                               <div class="form-group">
-                                   <textarea class="form-control2" rows="5" id="comment" placeholder="Message"></textarea>
+                               <div class="right_contact">
+                                   <input type="email" class="form-control" id="email" placeholder="Email">
+                                   <div id="emailError" class="error"></div>
                                </div>
-                              <button class="btn btn-block" type="submit">Send Now!</button>
-                           </form>
+                               <div class="subject_contact">
+                                   <input type="text" class="form-control1" id="subject" placeholder="Subject">
+                                   <div id="subjectError" class="error"></div>
+                               </div>
+                           </div>
+                           <div class="form-group">
+                               <textarea class="form-control2" rows="5" id="message" placeholder="Message"></textarea>
+                               <div id="messageError" class="error"></div>
+                           </div>
+                           <button class="btn btn-block" type="submit">Send Now!</button>
+                       </form>
                        </div>
                    </div>
                </div>
@@ -102,6 +105,65 @@
          </div>
   <script src="jquery.js"></script>
              <script src="index.js"></script>
+            
+                <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission for validation
+
+            // Clear previous error messages
+            document.getElementById("nameError").textContent = "";
+            document.getElementById("emailError").textContent = "";
+            document.getElementById("subjectError").textContent = "";
+            document.getElementById("messageError").textContent = "";
+
+            // Get form values
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const subject = document.getElementById("subject").value.trim();
+            const message = document.getElementById("message").value.trim();
+
+            let isValid = true;
+
+            // Validate name (no numbers allowed)
+            const nameRegex = /^[A-Za-z\s]+$/; // Allows letters and spaces only
+            if (name === "") {
+                document.getElementById("nameError").textContent = "Name is required.";
+                isValid = false;
+            } else if (!nameRegex.test(name)) {
+                document.getElementById("nameError").textContent = "Name must contain only letters and spaces.";
+                isValid = false;
+            }
+
+            // Validate email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email === "") {
+                document.getElementById("emailError").textContent = "Email is required.";
+                isValid = false;
+            } else if (!emailRegex.test(email)) {
+                document.getElementById("emailError").textContent = "Please enter a valid email address.";
+                isValid = false;
+            }
+
+            // Validate subject
+            if (subject === "") {
+                document.getElementById("subjectError").textContent = "Subject is required.";
+                isValid = false;
+            }
+
+            // Validate message
+            if (message === "") {
+                document.getElementById("messageError").textContent = "Message is required.";
+                isValid = false;
+            }
+
+            // If all fields are valid, proceed with form submission
+            if (isValid) {
+                alert("Form submitted successfully!");
+                // Add your form submission logic here (e.g., sending data to a server)
+            }
+        });
+    </script>
+             </script>
             </body>
 
 </html>
