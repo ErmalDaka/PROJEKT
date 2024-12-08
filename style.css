@@ -1,18 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Manrope:wght@200..800&display=swap');
-body {
 
-  position: relative;
-  height: auto;
-}
-html, body {
-  height: 100%; /* Should enable full height */
-  overflow: hidden; /* Needed for Lenis to control scrolling */
-}
-.content-test {
-  position: relative;
-  height: auto;
-  width: 100%;
-}
 
 :root {
   --color-black: hsl(0, 0%, 10%);
@@ -468,7 +455,7 @@ html, body {
   width: 100%;
   float: left;
   display: block;
-  height: 100vh;
+  height: auto;
 }
 .main_home{
   width:100%;
@@ -803,10 +790,11 @@ html, body {
 }
 .time-header__title {
   color: #fff;
-  font-size: 46px;
-  font-family: Cardo;
+  font-size: 60px;
   font-weight: normal;
   margin: 0;
+  font-family: 'Manrope';
+  font-weight: 600;
 }
 .time-header__subtitle {
   color: rgba(255, 255, 255, 0.5);

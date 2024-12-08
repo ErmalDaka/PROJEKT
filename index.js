@@ -114,17 +114,3 @@ window.addEventListener('load', function () {
 $("#time-1").timeline();
 
 
-// Initialize Lenis
-const lenis = new Lenis({
-  duration: 1.2, // Smooth scroll duration
-  smooth: true, // Enable smooth scrolling
-  direction: 'vertical', // Vertical scrolling
-});
-
-// Animation Frame Loop
-function raf(time) {
-  lenis.raf(time); // Update Lenis on each frame
-  requestAnimationFrame(raf); // Keep looping
-}
-
-requestAnimationFrame(raf); // Start the loop
