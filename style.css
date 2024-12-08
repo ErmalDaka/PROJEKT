@@ -22,7 +22,7 @@
 *::before,
 *::after {
   padding: 0;
-  margin: 0; 0; */
+  margin: 0; 
 }
 
 
@@ -457,6 +457,28 @@
   display: block;
   height: auto;
 }
+
+.about_uss{
+  width: 100%;
+  float: left;
+  display: block;
+  height: auto;
+  position: relative;
+}
+
+.about_uss::after{
+  width: 100%;
+  float: left;
+  display: block;
+  content: '';
+  height: 50px;
+  clip-path: polygon(0 60%, 100% 0, 100% 100%, 0 100%);
+  position: absolute;
+  bottom: -1;
+  z-index: 2;
+  background: white;
+}
+
 .main_home{
   width:100%;
   float:left;
@@ -467,6 +489,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow: hidden;
 }
 .main_home video{
   width: 100%;
@@ -787,6 +810,11 @@
   text-align: center;
   margin-bottom: 80px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 .time-header__title {
   color: #fff;
@@ -809,8 +837,8 @@
   width: 100%;
   float: left;
   display: block;
-  height:100vh;
-  margin-top: 100px;
+  height: auto;
+  padding: 50px 0 20px 0;
 }
 
 .contact_info {
@@ -822,25 +850,38 @@
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  /* margin-top: 50px; */
+  height: 50vh;
 }
 
 .contact_info img{
   height: 200px;
-  position: relative;
+  position: absolute;
   mix-blend-mode: color-dodge;
 }
 
 
-.contact_info h3{
+.contact_info a{
   /* width: 50%; */
   float: left;
-  display: block;
+  display: flex;
   font-size: 120px;
   font-family: 'Manrope';
   font-weight: 800;
   color: var(--color-blue-200);
   position: absolute;
   mix-blend-mode: color-dodge;
+  transition: 0.4s;
+  text-decoration: none;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.contact_info a:hover{
+  transform: scale(1.1);
+  transition: 0.4s;
 }
 
 .slider::after{
@@ -857,3 +898,380 @@
 }
 
 
+.footer_end {
+  width: 100%;
+  float: left;
+  display: block;
+  position: relative;
+  text-align: center;
+}
+
+.footer_end h3{
+  width: 100%;
+  float: left;
+  display: block;
+  font-family: 'Manrope';
+  font-weight: 800;
+  color: var(--color-blue-200);
+  font-size: 40px;
+  margin: 10px 0 0 0;
+}
+
+.footer_end h4 {
+  width: 100%;
+  float: left;
+  display: block;
+  font-family: 'Manrope';
+  font-weight: 500;
+  color: #727272;
+  font-size: 18px;
+  margin: 10px 0;
+}
+.footer_end h5 {
+  width: 100%;
+  float: left;
+  display: block;
+  font-family: 'Manrope';
+  font-weight: 500;
+  color: #727272;
+  font-size: 14px;
+  margin-top: 20px;
+}
+.line_margin {
+  width: 80%;
+  float: left;
+  display: block;
+  border: 1px solid #727272;
+  margin-left: 10%;
+  border-radius: 50%;
+  margin: 15px 0 15px 10%;
+  opacity: 0.5;
+}
+
+.about_uss h4{
+  width: 50%;
+  float: left;
+  display: block;
+  height: auto;
+  font-family: 'Manrope';
+  font-weight: 500;
+  font-size: 14px;
+  /* text-align: center; */
+  color: #ffffff;
+  margin: 20px 0;
+}
+
+
+
+.contact {
+  padding: 0;
+  width: 1200px;
+  float: left;
+  display: block;
+  flex-direction: row;
+  /* align-content: center; */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-left: calc((100% - 1200px) /2);
+  height: 85vh;
+  margin-top: 100px;
+}
+
+
+.contact .heading h2 {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 800;
+  margin: 0;
+  padding: 0;
+  font-family: 'Manrope';
+  color: #727272;
+}
+
+.contact .heading h2 span {
+  color: #2d69eb;
+}
+
+.contact .heading p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #999999;
+  margin: 20px 0 60px;
+  padding: 0;
+  text-align: center;
+  font-family: 'Manrope';
+}
+
+.contact .form-control {
+  padding: 25px;
+  font-size: 13px;
+  margin-bottom: 10px;
+  background: #f9f9f9;
+  border: 0;
+  border-radius: 10px;
+  width: 97%;
+}
+
+.contact button.btn {
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 15px;
+  background: #2d69eb;
+  color: #ffffff;
+  border: none;
+  width: 100%;
+}
+
+.contact .title h3 {
+  font-size: 22px;
+  font-weight: 600;
+  font-family: 'Manrope';
+}
+
+.contact .title p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #999;
+  line-height: 1.6;
+  margin: 0 0 40px;
+  font-family: 'Manrope';
+  width: 80%;
+}
+
+.contact .content .info {
+  margin-top: 30px;
+}
+.contact .content .info i {
+  font-size: 30px;
+  padding: 0;
+  margin: 0;
+  color: #02434b;
+  margin-right: 20px;
+  text-align: center;
+  width: 20px;
+}
+.contact .content .info h4 {
+  font-size: 13px;
+  line-height: 1.4;
+  font-family: 'Manrope';
+}
+
+.contact .content .info h4 span {
+  font-size: 13px;
+  font-weight: 300;
+  color: #999999;
+  font-family: 'Manrope';
+}
+
+.left_contact{
+  width: 50%;
+  float: left;
+  display: block;
+}
+.right_contact{
+  width: 50%;
+  float: left;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.subject_contact{
+  width: 100%;
+  float: left;
+  display: block;
+}
+
+.form-control1 {
+  width: 100%;
+  padding: 25px;
+  font-size: 13px;
+  margin-bottom: 10px;
+  background: #f9f9f9;
+  border: 0;
+  border-radius: 10px;
+}
+.form-group{
+  width: 100%;
+  float: left;
+  display: block;
+}
+.form-control2 {
+  padding: 25px;
+  font-size: 13px;
+  margin-bottom: 10px;
+  background: #f9f9f9;
+  border: 0;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.products_main{
+  width: 100%;
+  float: left;
+  display: block;
+  height: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.rows {
+  width: 80%;
+  float: left;
+  display: flex;
+  height: 50vh;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+  margin:30px 0;
+  margin-left: 10%;
+  
+}
+
+.product {
+  width: 40vh;
+  float: left;
+  display: block;
+  height: 48vh;
+  /* background: red; */
+  border-radius: 15px;
+  transition: 0.4s;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.product:hover{
+  width:42vh;
+  height: 50vh;
+  transition: 0.4s;
+}
+.product img{
+  object-fit: cover;
+  width: 100%;
+}
+
+.product_img{
+  width:100%;
+  height: 45%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.product_desc{
+  width: calc(100% - 20px);
+  float: left;
+  display: flex;
+  height: 55%;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.product_desc h1{
+  font-family: 'Manrope';
+  margin: 0;
+  padding: 0;
+  font-size: 26px;
+  font-weight: 800;
+}
+.product_desc p {
+  font-family: 'Manrope';
+  margin: 0;
+  padding: 0;
+  font-size: 2.0vh;
+  font-weight: 500;
+}
+
+.products_main h2{
+  width: 100%;
+  float: left;
+  display: block;
+  text-align: center;
+  font-family: 'Manrope';
+  font-size: 56px;
+  color: var(--color-blue-200);
+  margin: 0 0 20px 0;
+}
+.products_main h3{
+  width: 100%;
+  float: left;
+  display: block;
+  text-align: center;
+  font-family: 'Manrope';
+  font-size: 18px;
+  color: #727272;
+  margin: 0px 0 30px 0;
+}
+
+.main_home a{
+  font-family: 'Manrope';
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 12px;
+  /* text-align: right; */
+  width: auto;
+  float: left;
+  display: block;
+  position: absolute;
+  right: 40px;
+  bottom: 25px;
+  z-index: 1;
+  
+  transition: 0.4s;
+}
+.main_home a:hover{
+  font-size: 14px;
+  transition: 0.4s;
+}
+
+.potato-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 250px;
+}
+.potato-box h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+.magic-chamber {
+  margin-bottom: 15px;
+}
+.magic-chamber label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+.magic-chamber input {
+  width: 92%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.purple-banana {
+  width: 100%;
+  padding: 10px;
+  background-color: #6200ea;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.purple-banana:hover {
+  background-color: #4e00b3;
+}
