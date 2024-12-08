@@ -22,7 +22,7 @@
 *::before,
 *::after {
   padding: 0;
-  margin: 0;
+  margin: 0; 0; */
 }
 
 
@@ -641,7 +641,7 @@
   padding: 5px 10px;
   left: 0;
   right: 0;
-  bottom: 5vh;
+  bottom: 10vh;
   margin: auto;
   transition: 0.4s;
 }
@@ -810,9 +810,50 @@
   float: left;
   display: block;
   height:100vh;
+  margin-top: 100px;
+}
+
+.contact_info {
+  width: 100%;
+  float: left;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.contact_info img{
+  height: 200px;
+  position: relative;
+  mix-blend-mode: color-dodge;
 }
 
 
+.contact_info h3{
+  /* width: 50%; */
+  float: left;
+  display: block;
+  font-size: 120px;
+  font-family: 'Manrope';
+  font-weight: 800;
+  color: var(--color-blue-200);
+  position: absolute;
+  mix-blend-mode: color-dodge;
+}
 
+.slider::after{
+  width: 100%;
+  float: left;
+  display: block;
+  content: '';
+  height: 50px;
+  clip-path: polygon(0 60%, 100% 0, 100% 100%, 0 100%);
+  position: absolute;
+  bottom: -1;
+  z-index: 2;
+  background: white;
+}
 
 
